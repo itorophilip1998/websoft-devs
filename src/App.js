@@ -13,35 +13,35 @@ import Main from './components/Main';
 // import JoinUs from "./components/forms/JoinUs"
 import NotFoundPage from './components/NotFoundPage';
 class App extends React.Component {
-state={
-  name:"Websoft"
-};
+  state = {
+    name: "Websoft"
+  };
 
- render(){
-   const {name}=this.state
-  return (
+  render() {
+    const { name } = this.state
+    return (
       <Router>
-        <Header name={name}/>  
+        <Header name={name} />
 
         <Routes>
-         
-          <Route path="/" element={<Main/>} name={name}  exact/> 
-          <Route path="/contact" element={<ContactForm />}  /> 
-            {/* <Route path="/blogs" element={<Blogs/>} /> */}
-            {/* <Route path="/blogs/:blogId" element={<Blog />} /> */}
-            {/* <Route path="/blogs/post" element={<Post />} /> */}
-          <Route path="/getstarted" element={<ChoiceBox/>} />
+
+          <Route path="/" element={<Main />} name={name} exact />
+          <Route path="/contact" element={<ContactForm />} />
+          {/* <Route path="/blogs" element={<Blogs/>} /> */}
+          {/* <Route path="/blogs/:blogId" element={<Blog />} /> */}
+          {/* <Route path="/blogs/post" element={<Post />} /> */}
+          <Route path="/getstarted" element={<ChoiceBox />} />
           {/* <Route path="/join-us" element={<JoinUs/>} /> */}
           {/* <Route path="/employ-dev" element={<EmployDev/>} /> */}
           {/* <Route path="/find-dev" element={<FindDev/>} /> */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
 
-        <Footer  name={name} />
+        <Footer name={name} />
       </Router>
-      
-  );
- }
+
+    );
+  }
 }
 
 export default App;
