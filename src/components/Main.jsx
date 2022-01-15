@@ -495,15 +495,15 @@ class Main extends React.Component {
       {/* <!-- End Testimonials Section --> */}
   
       {/* <!-- ======= Team Section ======= --> */}
-      <Team/>
+            {/* <Team clasName="d-none"/> */}
       {/* <!-- End Team Section --> */}
   
      
   
       {/* <!-- ======= Recent Blog Posts Section ======= --> */}
-      <section id="recent-blog-posts" className="recent-blog-posts d-none">
+      <section id="recent-blog-posts" className="recent-blog-posts d-none ">
   
-        <div className="container" data-aos="fade-up">
+        <div className="container "  data-aos="fade-up">
   
           <header className="section-header">
             <h2>Blog</h2>
@@ -544,6 +544,9 @@ class Main extends React.Component {
         </div>
   
       </section>
+
+
+            
       {/* <!-- End Recent Blog Posts Section --> */}
   
 
@@ -565,8 +568,11 @@ class Main extends React.Component {
                 </div>
               </div>
             </div>
-        </footer>
-        
+            </footer>
+             
+            
+           <a href="#" className='whatsapp bg-white shadow'> <i className="fa fa-whatsapp text-success  fa-3x" aria-hidden="true"></i></a>
+            
       {/*  News letter ends*/}
     </main>
 

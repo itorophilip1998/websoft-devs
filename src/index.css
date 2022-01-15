@@ -24,3 +24,15 @@
  .d-none{
    display:none !important;
  }
+
+ .whatsapp{
+   position:fixed !important;
+   right:7% !important;
+   bottom:30% !important;
+   padding:2px 5px;
+   border-radius:50%;
+   width:54px;
+   z-index:4px !important;
+   height:54px;
+ }
+ 
