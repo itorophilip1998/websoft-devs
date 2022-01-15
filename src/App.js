@@ -1,16 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Switch } from "react-router-dom";
-import Blog from './components/blog/Blog';
-import Blogs from './components/blog/Blogs';
-import Post from './components/blog/Post';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import Blog from './components/blog/Blog';
+// import Blogs from './components/blog/Blogs';
+// import Post from './components/blog/Post';
 import ChoiceBox from './components/ChoiceBox';
 import ContactForm from './components/forms/ContactForm';
 import Footer from './components/layout/Footer';
 import Header from './components/layout/Header';
 import Main from './components/Main';
-import FindDev from "./components/forms/FindDev"
-import EmployDev from "./components/forms/EmployDev"
-import JoinUs from "./components/forms/JoinUs"
+// import FindDev from "./components/forms/FindDev"
+// import EmployDev from "./components/forms/EmployDev"
+// import JoinUs from "./components/forms/JoinUs"
 import NotFoundPage from './components/NotFoundPage';
 class App extends React.Component {
 state={
