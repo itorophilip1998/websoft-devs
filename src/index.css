@@ -1,0 +1,23 @@
+:root{
+  --primary:#012970
+}
+.rounded-x{
+  border-radius:10px !important;
+}
+
+.link{
+  cursor:pointer
+  }
+.infotTab{
+  border:1px solid whitesmoke !important
+}
+.infotTab:hover{
+  border:1px solid var(--primary) !important
+}
+.infotTab:hover h4{
+  color:var(--primary) !important
+}
+ .text-pri{
+  color:var(--primary) !important
+
+ }
