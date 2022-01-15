@@ -575,4 +575,4 @@ class Main extends React.Component {
     }
 } 
 
-export default Ma
+export default Main;

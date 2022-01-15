@@ -14,7 +14,7 @@ import JoinUs from "./components/forms/JoinUs"
 import NotFoundPage from './components/NotFoundPage';
 class App extends React.Component {
 state={
-  name:"Devsoft"
+  name:"Websoft"
 };
 
  render(){

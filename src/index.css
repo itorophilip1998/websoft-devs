@@ -21,3 +21,6 @@
   color:var(--primary) !important
 
  }
+ .d-none{
+   display:none !important;
+ }
