@@ -1,4 +1,5 @@
-import React from 'react'; 
+import React from 'react';
+import Team from './Team';
 import FAQ from './FAQ'; 
 class Main extends React.Component {
   state={
@@ -48,7 +49,7 @@ class Main extends React.Component {
                <br/> We also recruit intent who are willing to explore in Tech
                 </p>
                 <div className="text-center text-lg-start">
-                  <a href="#" className="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                  <a href="javascript:void(0)" className="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
                     <span>Join Us</span>
                     <i className="bi bi-arrow-right"></i>
                   </a>
@@ -292,7 +293,7 @@ class Main extends React.Component {
                 <i className="ri-discuss-line icon"></i>
                 <h3>Web Applications</h3>
                 <p>We create website and web application for large and small company and price is affordable.</p>
-                <a href="#" className="read-more"><span>Read More</span> <i className="bi bi-arrow-right"></i></a>
+                <a href="javascript:void(0)" className="read-more"><span>Read More</span> <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
   
@@ -301,7 +302,7 @@ class Main extends React.Component {
                 <i className="ri-discuss-line icon"></i>
                 <h3>Mobile Applications</h3>
                 <p>We create IOS application and Andriod mobile application with affordable price.</p>
-                <a href="#" className="read-more"><span>Read More</span> <i className="bi bi-arrow-right"></i></a>
+                <a href="javascript:void(0)" className="read-more"><span>Read More</span> <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
   
@@ -311,7 +312,7 @@ class Main extends React.Component {
                 <h3>Desktop Applications</h3>
 
                 <p>We creat Desktop application for Windows opersting system, Mac operating system and linux Operating system.</p>
-                <a href="#" className="read-more"><span>Read More</span> <i className="bi bi-arrow-right"></i></a>
+                <a href="javascript:void(0)" className="read-more"><span>Read More</span> <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
   
@@ -320,7 +321,7 @@ class Main extends React.Component {
                 <i className="ri-discuss-line icon"></i>
                 <h3>Content Writting</h3>
                 <p>Create from no where and modernise your content for users to read and know more about you and your product.</p>
-                <a href="#" className="read-more"><span>Read More</span> <i className="bi bi-arrow-right"></i></a>
+                <a href="javascript:void(0)" className="read-more"><span>Read More</span> <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
   
@@ -329,7 +330,7 @@ class Main extends React.Component {
                 <i className="ri-discuss-line icon"></i>
                 <h3>Software Makerting/Mangement.</h3>
                 <p>We manage your site as well as marketting your your product and advertising your company.</p>
-                <a href="#" className="read-more"><span>Read More</span> <i className="bi bi-arrow-right"></i></a>
+                <a href="javascript:void(0)" className="read-more"><span>Read More</span> <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
   
@@ -338,7 +339,7 @@ class Main extends React.Component {
                 <i className="ri-discuss-line icon"></i>
                 <h3>UIUX Designs</h3>
                 <p>We design and create prototype for your product uniquely and also create users experience and users interfaces for your product.</p>
-                <a href="#" className="read-more"><span>Read More</span> <i className="bi bi-arrow-right"></i></a>
+                <a href="javascript:void(0)" className="read-more"><span>Read More</span> <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
   
@@ -569,7 +570,7 @@ class Main extends React.Component {
             </footer>
              
             
-           <a href="#" className='whatsapp bg-white shadow d-none'> <i className="fa fa-whatsapp text-success  fa-3x" aria-hidden="true"></i></a>
+           <a href="javascript:void(0)" className='whatsapp bg-white shadow'> <i className="fa fa-whatsapp text-success  fa-3x" aria-hidden="true"></i></a>
             
       {/*  News letter ends*/}
     </main>

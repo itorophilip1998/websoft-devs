@@ -25,9 +25,9 @@ class footer extends React.Component {
                   </a>
                   <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
                   <div className="social-links mt-3"> 
-                    <a href="#" className="linkedin"><i className="bi bi-telegram"></i></a>
-                    <a href="#" className="instagram"><i className="bi bi-whatsapp"></i></a>
-                    <a href="#" className="linkedin"><i className="bi bi-linkedin"></i></a>
+                    <a href="javascript:void(0)" className="linkedin"><i className="bi bi-telegram"></i></a>
+                    <a href="javascript:void(0)" className="instagram"><i className="bi bi-whatsapp"></i></a>
+                    <a href="javascript:void(0)" className="linkedin"><i className="bi bi-linkedin"></i></a>
                   </div>
                 </div>
       
@@ -37,19 +37,19 @@ class footer extends React.Component {
                     <li><i className="bi bi-chevron-right"></i> <a href="/">Home</a></li>
                     <li><i className="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
                     <li><i className="bi bi-chevron-right"></i> <a href="#services">Services</a></li>
-                    {/* <li><i className="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li> */}
-                    {/* <li><i className="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li> */}
+                    {/* <li><i className="bi bi-chevron-right"></i> <a href="javascript:void(0)">Terms of service</a></li> */}
+                    {/* <li><i className="bi bi-chevron-right"></i> <a href="javascript:void(0)">Privacy policy</a></li> */}
                   </ul>
                 </div>
       
                 <div className="col-lg-2 col-6 footer-links">
                   <h4>Our Services</h4>
                   <ul>
-                    <li><i className="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-                    <li><i className="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-                    <li><i className="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-                    <li><i className="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-                    <li><i className="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                    <li><i className="bi bi-chevron-right"></i> <a href="javascript:void(0)">Web Design</a></li>
+                    <li><i className="bi bi-chevron-right"></i> <a href="javascript:void(0)">Web Development</a></li>
+                    <li><i className="bi bi-chevron-right"></i> <a href="javascript:void(0)">Product Management</a></li>
+                    <li><i className="bi bi-chevron-right"></i> <a href="javascript:void(0)">Marketing</a></li>
+                    <li><i className="bi bi-chevron-right"></i> <a href="javascript:void(0)">Graphic Design</a></li>
                   </ul>
                 </div>
       
