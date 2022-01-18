@@ -25,36 +25,34 @@ submitForm=(e)=>{
        </header>
    
        <div className="row gy-4">
-   
-         <div className="col-lg-6">
-   
+         <div className="col-lg-6 " >
            <div className="row gy-4">
-             <div className="col-md-6">
+             <div className="col-md-6 shadow">
                <div className="info-box">
                  <i className="bi bi-geo-alt"></i>
                  <h3>Address</h3>
-                 <p>Akwa Ibom State &<br/>Anambara State,Nigeria</p>
+                 <p>Remote</p>
                </div>
              </div>
-             <div className="col-md-6">
+             <div className="col-md-6 shadow">
                <div className="info-box">
                  <i className="bi bi-telephone"></i>
                  <h3>Call Us</h3>
-                 <p>09024195493<br/>09024195493</p>
+                 <p>+2349024195493</p>
                </div>
              </div>
-             <div className="col-md-6">
+             <div className="col-md-6 shadow">
                <div className="info-box">
                  <i className="bi bi-envelope"></i>
                  <h3>Email Us</h3>
-                 <p>devsoft@gmail.com<br/>websoft@gmail.com</p>
+                 <p>websoft@gmail.com</p>
                </div>
              </div>
-             <div className="col-md-6">
+             <div className="col-md-6 shadow">
                <div className="info-box">
                  <i className="bi bi-clock"></i>
                  <h3>Open Hours</h3>
-                 <p>Monday - Friday<br/>9:00AM - 05:00PM</p>
+                 <p>24/hours Everyday</p>
                </div>
              </div>
            </div>

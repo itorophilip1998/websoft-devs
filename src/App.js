@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import Blog from './components/blog/Blog';
 // import Blogs from './components/blog/Blogs';
 // import Post from './components/blog/Post';
-import ChoiceBox from './components/ChoiceBox';
+// import ChoiceBox from './components/ChoiceBox';
 import ContactForm from './components/forms/ContactForm';
 import Footer from './components/layout/Footer';
 import Header from './components/layout/Header';
@@ -30,7 +30,7 @@ class App extends React.Component {
           {/* <Route path="/blogs" element={<Blogs/>} /> */}
           {/* <Route path="/blogs/:blogId" element={<Blog />} /> */}
           {/* <Route path="/blogs/post" element={<Post />} /> */}
-          <Route path="/getstarted" element={<ChoiceBox />} />
+          {/* <Route path="/getstarted" element={<ChoiceBox /> */}
           {/* <Route path="/join-us" element={<JoinUs/>} /> */}
           {/* <Route path="/employ-dev" element={<EmployDev/>} /> */}
           {/* <Route path="/find-dev" element={<FindDev/>} /> */}

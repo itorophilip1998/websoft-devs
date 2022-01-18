@@ -1,7 +1,5 @@
-import React from 'react';
-import Team from './Team';
-import FAQ from './FAQ';
-import ChoiceBox from './ChoiceBox';
+import React from 'react'; 
+import FAQ from './FAQ'; 
 class Main extends React.Component {
   state={
     email:""
@@ -571,7 +569,7 @@ class Main extends React.Component {
             </footer>
              
             
-           <a href="#" className='whatsapp bg-white shadow'> <i className="fa fa-whatsapp text-success  fa-3x" aria-hidden="true"></i></a>
+           <a href="#" className='whatsapp bg-white shadow d-none'> <i className="fa fa-whatsapp text-success  fa-3x" aria-hidden="true"></i></a>
             
       {/*  News letter ends*/}
     </main>

@@ -24,10 +24,9 @@ class footer extends React.Component {
                     <span>{name}</span>
                   </a>
                   <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
-                  <div className="social-links mt-3">
-                    <a href="#" className="twitter"><i className="bi bi-twitter"></i></a>
-                    <a href="#" className="facebook"><i className="bi bi-facebook"></i></a>
-                    <a href="#" className="instagram"><i className="bi bi-instagram"></i></a>
+                  <div className="social-links mt-3"> 
+                    <a href="#" className="linkedin"><i className="bi bi-telegram"></i></a>
+                    <a href="#" className="instagram"><i className="bi bi-whatsapp"></i></a>
                     <a href="#" className="linkedin"><i className="bi bi-linkedin"></i></a>
                   </div>
                 </div>
@@ -35,11 +34,11 @@ class footer extends React.Component {
                 <div className="col-lg-2 col-6 footer-links">
                   <h4>Useful Links</h4>
                   <ul>
-                    <li><i className="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-                    <li><i className="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-                    <li><i className="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-                    <li><i className="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-                    <li><i className="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                    <li><i className="bi bi-chevron-right"></i> <a href="/">Home</a></li>
+                    <li><i className="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
+                    <li><i className="bi bi-chevron-right"></i> <a href="#services">Services</a></li>
+                    {/* <li><i className="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li> */}
+                    {/* <li><i className="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li> */}
                   </ul>
                 </div>
       
@@ -57,10 +56,8 @@ class footer extends React.Component {
                 <div className="col-lg-3 col-md-12 footer-contact text-center text-md-start">
                   <h4>Contact Us</h4>
                   <p>
-                    A108 Adam Street <br/>
-                    New York, NY 535022<br/>
-                    United States <br/><br/>
-                    <strong>Phone:</strong> +1 5589 55488 55<br/>
+                    Remote <br/>
+                    <strong>Phone:</strong> +2349024195493<br/>
                     <strong>Email:</strong> itorophilip1998@example.com<br/>
                   </p>  
                 </div>

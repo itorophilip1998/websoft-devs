@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link, Navigator,NavLink} from "react-router-dom";
-import ChoiceBox from '../ChoiceBox';
+import { Link} from "react-router-dom"; 
 class Header extends React.Component {
   state={ 
     ico:"bi-list",
