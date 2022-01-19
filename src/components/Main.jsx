@@ -1,6 +1,7 @@
-import React from 'react';
-import Team from './Team';
-import FAQ from './FAQ'; 
+ /* eslint-disable */
+import React from 'react'; 
+// import FAQ from './FAQ'; 
+import ContactForm from './forms/ContactForm'
 class Main extends React.Component {
   state={
     email:""
@@ -350,10 +351,11 @@ class Main extends React.Component {
       </section>
       {/* <!-- End Services Section --> */}
    
-  
-      {/* <!-- ======= F.A.Q Section ======= --> */}
-        <FAQ/>
-      {/* <!-- End F.A.Q Section --> */}
+        {/* contact Section */}
+
+            <ContactForm/>
+            
+        {/* contact Section */}
 
 
   
@@ -570,7 +572,7 @@ class Main extends React.Component {
             </footer>
              
             
-           <a href="javascript:void(0)" className='whatsapp bg-white shadow'> <i className="fa fa-whatsapp text-success  fa-3x" aria-hidden="true"></i></a>
+           <a href="javascript:void(0)" className='whatsapp bg-white shadow d-none'> <i className="fa fa-whatsapp text-success  fa-3x" aria-hidden="true"></i></a>
             
       {/*  News letter ends*/}
     </main>

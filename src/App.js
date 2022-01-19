@@ -12,6 +12,7 @@ import Main from './components/Main';
 // import EmployDev from "./components/forms/EmployDev"
 // import JoinUs from "./components/forms/JoinUs"
 import NotFoundPage from './components/NotFoundPage';
+/* eslint-disable */
 class App extends React.Component {
   state = {
     name: "Websoft"
