@@ -19,6 +19,8 @@
       }
     ],
     "paths": {
+      "@/generated/prisma/client": ["./prisma/client"],
+      "@/generated/prisma/*": ["./prisma/*"],
       "@/*": ["./*"],
       "@prisma/client": ["./node_modules/.prisma/client"]
     }
