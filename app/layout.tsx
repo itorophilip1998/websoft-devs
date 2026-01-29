@@ -4,6 +4,9 @@ import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import AOSInit from "@/components/AOSInit";
 
+const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+const hasClerk = Boolean(clerkPublishableKey?.trim());
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -23,21 +26,31 @@ export const metadata: Metadata = {
   },
 };
 
+function LayoutContent({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="en" className="scroll-smooth">
+      <body
+        className={`${inter.variable} ${geistMono.variable} antialiased`}
+      >
+        <AOSInit />
+        {children}
+      </body>
+    </html>
+  );
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <ClerkProvider>
-      <html lang="en" className="scroll-smooth">
-        <body
-          className={`${inter.variable} ${geistMono.variable} antialiased`}
-        >
-          <AOSInit />
-          {children}
-        </body>
-      </html>
+  return hasClerk ? (
+    <ClerkProvider publishableKey={clerkPublishableKey!}>
+      <LayoutContent>{children}</LayoutContent>
     </ClerkProvider>
+  ) : (
+    <LayoutContent>{children}</LayoutContent>
   );
 }
