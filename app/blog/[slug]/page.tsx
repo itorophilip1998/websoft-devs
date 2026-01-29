@@ -114,7 +114,7 @@ export default async function BlogPostPage({
 
   return (
     <article className="bg-white min-h-screen">
-      <div className="container mx-auto px-4 py-8 max-w-4xl w-full">
+      <div className="container mx-auto px-4 py-8 max-w-5xl w-full">
         {/* Breadcrumb */}
         <nav
           className="text-sm text-gray-500 mb-6"
@@ -143,7 +143,7 @@ export default async function BlogPostPage({
 
       {/* Featured Image */}
       {post.featuredImage && (
-        <div className="container mx-auto px-4 max-w-4xl w-full" data-aos="fade-up">
+        <div className="container mx-auto px-4 max-w-5xl w-full" data-aos="fade-up">
           <div className="relative w-full aspect-video rounded-xl overflow-hidden">
             <Image
               src={post.featuredImage}
@@ -156,7 +156,7 @@ export default async function BlogPostPage({
         </div>
       )}
 
-      <div className="container mx-auto px-4 py-12 max-w-4xl w-full">
+      <div className="container mx-auto px-4 py-12 max-w-5xl w-full">
         {/* Post Header */}
         <header className="mb-10" data-aos="fade-up">
           <h1
@@ -174,12 +174,20 @@ export default async function BlogPostPage({
             <span className="mx-2" aria-hidden="true">·</span>
             {readingTime} min read
           </p>
+          {post.excerpt && (
+            <p
+              className="text-lg mb-4"
+              style={{ color: 'var(--body-text)' }}
+            >
+              {post.excerpt}
+            </p>
+          )}
           <ShareButtons url={postUrl} title={post.title} />
         </header>
 
         {/* Post Content */}
         <div
-          className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-[var(--primary)] prose-strong:text-gray-900 prose-img:rounded-lg mb-10"
+          className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-[var(--body-text)] prose-li:text-[var(--body-text)] prose-a:text-[var(--primary)] prose-strong:text-gray-900 prose-img:rounded-lg mb-10"
           data-aos="fade-up"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />

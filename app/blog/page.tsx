@@ -37,7 +37,7 @@ export default async function BlogPage({
 
   return (
     <section className="bg-gray-50 min-h-screen">
-      <div className="container mx-auto px-4 py-16 max-w-5xl w-full">
+      <div className="container mx-auto px-4 py-16 max-w-6xl w-full">
         <div className="text-center mb-14" data-aos="fade-up">
           <h1
             className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 tracking-tight"

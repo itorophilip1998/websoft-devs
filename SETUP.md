@@ -87,7 +87,28 @@ Run the database in Docker and connect the app to it:
 
 The app uses `DATABASE_URL` to decide: if it starts with `postgresql://`, it connects to PostgreSQL; otherwise it uses SQLite.
 
-### 7. Create Admin User
+### 7. Run full stack with Docker
+
+Run the database, Next.js app, and a database UI (Adminer) in Docker.
+
+**Prerequisites:** Docker and Docker Compose.
+
+1. Ensure `.env.local` has your Clerk keys and optionally `NEXT_PUBLIC_APP_URL=http://localhost:3000`.
+2. First time, build and start everything:
+   ```bash
+   docker compose up -d --build
+   ```
+3. One-time: apply schema and seed from the host:
+   ```bash
+   docker compose exec app npx prisma db push
+   docker compose exec app npx prisma db seed
+   ```
+4. **URLs:**
+   - **App:** [http://localhost:3000](http://localhost:3000)
+   - **Database UI (Adminer):** [http://localhost:8080](http://localhost:8080)  
+     In Adminer: **System** = PostgreSQL, **Server** = `db`, **User** = `websoft`, **Password** = `websoft_secret`, **Database** = `websoft`.
+
+### 8. Create Admin User
 
 To create an admin user, you'll need to:
 
@@ -108,7 +129,7 @@ Or use SQL:
 UPDATE User SET role = 'admin' WHERE email = 'your-email@example.com';
 ```
 
-### 8. Run Development Server
+### 9. Run Development Server
 
 ```bash
 npm run dev

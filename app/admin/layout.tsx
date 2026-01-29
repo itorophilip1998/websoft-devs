@@ -1,6 +1,9 @@
 import { redirect } from 'next/navigation';
 import { isAdmin } from '@/lib/auth';
 import Header from '@/components/Header';
+
+export const dynamic = 'force-dynamic';
+
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { FileText, Plus, Settings } from 'lucide-react';

@@ -1,3 +1,7 @@
+/**
+ * Seed script: author, 20 blog posts (with featured images), comments, replies.
+ * To (re)apply featured images to all seed posts, run: npx prisma db seed
+ */
 import "dotenv/config";
 import { prisma } from "../lib/db";
 
@@ -109,6 +113,17 @@ async function main() {
     });
   }
 
+  // Guarantee featured images on all seed posts (e.g. after re-running seed)
+  for (let i = 1; i <= 20; i++) {
+    const slug = `${SEED_SLUG_PREFIX}${i}`;
+    const featuredImage =
+      FEATURED_IMAGE_PATHS[(i - 1) % FEATURED_IMAGE_PATHS.length];
+    await prisma.post.updateMany({
+      where: { slug },
+      data: { featuredImage },
+    });
+  }
+
   const posts = await prisma.post.findMany({
     where: { slug: { startsWith: SEED_SLUG_PREFIX } },
     orderBy: { createdAt: "asc" },
@@ -146,7 +161,7 @@ async function main() {
     }
   }
 
-  console.log("Seed completed: 1 author, 20 posts (6 with images), comments and replies.");
+  console.log("Seed completed: 1 author, 20 posts (all with featured images), comments and replies.");
 }
 
 main()
