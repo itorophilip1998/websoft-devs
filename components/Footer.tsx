@@ -9,14 +9,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <Link href="/" className="inline-block mb-4">
+            <Link href="/" className="inline-flex items-center gap-2 mb-4">
               <Image
                 src="/images/logo.png"
-                alt="Websoft"
+                alt=""
                 width={140}
                 height={40}
                 className="h-10 w-auto brightness-0 invert"
               />
+              <span className="text-lg font-semibold text-white">Websoft</span>
             </Link>
             <p className="text-sm mb-4">
               Cras fermentum odio eu feugiat lide par naso tierra. Justo eget
@@ -183,8 +184,9 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
+        {/* Bottom bar: Websoft left, copyright right */}
+        <div className="mt-8 pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+          <p className="font-semibold text-white">Websoft</p>
           <p>&copy; {new Date().getFullYear()} Websoft. All rights reserved.</p>
         </div>
       </div>

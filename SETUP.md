@@ -57,12 +57,35 @@ Without `RESEND_API_KEY`, signups are still saved; no email is sent.
 2. Enable Google OAuth
 3. Configure your Google OAuth credentials
 
-### 6. Initialize Database
+### 6. Database: SQLite or PostgreSQL (Docker)
+
+**Option A – SQLite (default, no container)**  
+Use `DATABASE_URL="file:./dev.db"` in `.env.local`. Then:
 
 ```bash
 npx prisma generate
-npx prisma migrate dev
+npx prisma db push
 ```
+
+**Option B – PostgreSQL as a container (external service)**  
+Run the database in Docker and connect the app to it:
+
+1. Start the database container:
+   ```bash
+   docker compose up -d
+   ```
+2. In `.env.local`, set the Postgres URL (match user/password/db/port from `compose.yaml` or env):
+   ```env
+   DATABASE_URL="postgresql://websoft:websoft_secret@localhost:5432/websoft"
+   ```
+3. Generate the Prisma client and create tables:
+   ```bash
+   npx prisma generate
+   npx prisma db push
+   ```
+   Or use migrations: `npx prisma migrate dev`.
+
+The app uses `DATABASE_URL` to decide: if it starts with `postgresql://`, it connects to PostgreSQL; otherwise it uses SQLite.
 
 ### 7. Create Admin User
 
@@ -130,8 +153,11 @@ After signing up, update the user role in the database:
 # Using Prisma Studio (recommended)
 npx prisma studio
 
-# Or using SQL
+# Or using SQL (SQLite)
 sqlite3 prisma/dev.db "UPDATE User SET role = 'admin' WHERE email = 'your-email@example.com';"
+
+# Or using SQL (PostgreSQL, when using Docker)
+psql -U websoft -d websoft -c "UPDATE \"User\" SET role = 'admin' WHERE email = 'your-email@example.com';"
 ```
 
 ## Troubleshooting
