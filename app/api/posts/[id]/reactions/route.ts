@@ -14,12 +14,6 @@ export async function GET(
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id: postId } = await params;
-  if (!prismaWithReactions.postReaction) {
-    return NextResponse.json(
-      { error: "Reactions not available for this database" },
-      { status: 501 }
-    );
-  }
   try {
     const post = await prisma.post.findUnique({
       where: { id: postId },
@@ -27,6 +21,13 @@ export async function GET(
     });
     if (!post) {
       return NextResponse.json({ error: "Post not found" }, { status: 404 });
+    }
+    if (!prismaWithReactions.postReaction) {
+      return NextResponse.json({
+        likes: 0,
+        dislikes: 0,
+        userReaction: null,
+      });
     }
     const [likes, dislikes, reactions] = await Promise.all([
       prismaWithReactions.postReaction.count({

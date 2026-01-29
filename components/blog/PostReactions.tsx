@@ -13,7 +13,6 @@ interface ReactionState {
   dislikes: number;
   userReaction: 1 | -1 | null;
   loading: boolean;
-  unavailable?: boolean;
 }
 
 export default function PostReactions({ postId }: PostReactionsProps) {
@@ -28,10 +27,6 @@ export default function PostReactions({ postId }: PostReactionsProps) {
   const fetchReactions = async () => {
     try {
       const res = await fetch(`/api/posts/${postId}/reactions`);
-      if (res.status === 501) {
-        setState((s) => ({ ...s, loading: false, unavailable: true }));
-        return;
-      }
       if (!res.ok) return;
       const data = await res.json();
       setState((s) => ({
@@ -52,7 +47,6 @@ export default function PostReactions({ postId }: PostReactionsProps) {
 
   const handleReaction = async (value: 1 | -1) => {
     if (!isSignedIn) return;
-    if (state.unavailable) return;
     setState((s) => ({ ...s, loading: true }));
     try {
       const res = await fetch(`/api/posts/${postId}/reaction`, {
@@ -74,14 +68,14 @@ export default function PostReactions({ postId }: PostReactionsProps) {
     }
   };
 
-  if (state.unavailable) return null;
-
   const likeActive = state.userReaction === 1;
   const dislikeActive = state.userReaction === -1;
   const canAct = isSignedIn && !state.loading;
 
   return (
-    <div className="flex flex-wrap items-center gap-4 py-6 border-y border-gray-200">
+    <div className="flex flex-col gap-3 py-6 border-y border-gray-200">
+      <p className="text-sm font-medium text-gray-700">Was this helpful?</p>
+      <div className="flex flex-wrap items-center gap-4">
       <div className="flex items-center gap-2">
         <button
           type="button"
@@ -123,6 +117,7 @@ export default function PostReactions({ postId }: PostReactionsProps) {
           Sign in to like or dislike this post.
         </p>
       )}
+      </div>
     </div>
   );
 }
