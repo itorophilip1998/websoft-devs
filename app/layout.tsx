@@ -4,8 +4,10 @@ import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import AOSInit from "@/components/AOSInit";
 
-const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
-const hasClerk = Boolean(clerkPublishableKey?.trim());
+// Use placeholder during build when env is missing (e.g. Docker build without build-arg)
+// so that components using useUser() (e.g. Header) don't throw during static generation.
+const clerkPublishableKey =
+  process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY?.trim() || 'pk_test_placeholder';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -46,11 +48,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return hasClerk ? (
-    <ClerkProvider publishableKey={clerkPublishableKey!}>
+  return (
+    <ClerkProvider publishableKey={clerkPublishableKey}>
       <LayoutContent>{children}</LayoutContent>
     </ClerkProvider>
-  ) : (
-    <LayoutContent>{children}</LayoutContent>
   );
 }
